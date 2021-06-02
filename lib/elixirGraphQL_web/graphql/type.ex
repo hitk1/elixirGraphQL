@@ -12,4 +12,10 @@ defmodule ElixirGraphQLWeb.Graphql.Types do
     field :name, :string
     field :event_data, :string
   end
+
+  object :event_guests do
+    field :id, :id
+    field :event_id, :string
+    field :guest_id, :string
+  end
 end

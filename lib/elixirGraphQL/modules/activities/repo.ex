@@ -14,8 +14,21 @@ defmodule ElixirGraphQL.Modules.Activities.ActivityRepo do
 
   @doc false
   def changeset(activity, attrs) do
+    %{date_event: date_event, name: name} = attrs
+
+    [day, month, year] =
+      date_event
+      |> String.split("/")
+      |> Enum.map(fn item ->
+        String.to_integer(item)
+      end)
+
+    formated_attrs =
+      attrs
+      |> Map.put(:date_event, Date.new!(year, month, day))
+
     activity
-    |> cast(attrs, @required_params)
+    |> cast(formated_attrs, @required_params)
     |> validate_required(@required_params)
   end
 end

@@ -23,6 +23,21 @@ defmodule ElixirGraphQLWeb.Graphql.Resolver do
       {:ok, event}
     else
       {:error, reason} -> {:error, "Fail to create a new event"}
+      _ -> {:ok, "foi"}
+    end
+  end
+
+  def get_event_guests(args, _info) do
+    {:ok, EventInfo.get_event_guests(args)}
+  end
+
+  def create_event_guests(args, _info) do
+    case EventInfo.create_event_guests(args) do
+      {:ok, event_guests} ->
+        {:ok, event_guests}
+
+      _ ->
+        {:error, "Error on create relation"}
     end
   end
 end
