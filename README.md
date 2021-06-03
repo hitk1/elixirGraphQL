@@ -1,19 +1,13 @@
 # ElixirGraphQL
 
-To start your Phoenix server:
+Projeto foi desenvolvido seguindo uma "screencast" da experts club - [`Rocketseat`](https://rocketseat.com.br/)
+Com intuito de entender um pouco melhor o funcionamento de API GraphQL com [`Phoenix`](https://www.phoenixframework.org)
+utilizando uma lib para integrar com GraphQL [`Absinthe`](https://github.com/absinthe-graphql/absinthe)
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server`
+Setup e inicialização do projeto:
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+  * Instalando dependências `mix deps.get`
+  * Setup completo do banco de dados `mix ecto.setup`
+  * Inicialização do servidor graphQL Phoenix`mix phx.server`
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Agora basta acessar [`localhost:4000/graphiql`](http://localhost:4000/graphiql)
